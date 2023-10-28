@@ -13,7 +13,7 @@ class Solution {
 public:
     int sum=0;
     void dfs(TreeNode* curr,string s){
-        if(curr==NULL){
+            if(curr==NULL){
                 return;
             }
             if(curr->left==NULL&&curr->right==NULL){
@@ -22,18 +22,7 @@ public:
                 sum+=stoi(s);
                 return ;
             } 
-            // else if(curr->left==NULL||curr->right==NULL){
-            //     s=s+to_string(curr->val);
-            //     cout<<s<<endl;
-            //     return;
-            // }
-            // if(curr->right==NULL){
-            //      s=s+to_string(curr->val);
-            //     cout<<s<<endl;
-            //     sum+=stoi(s);
-            //     return ;
-            // }
-            
+
             
             s=s+to_string(curr->val);
             dfs(curr->left,s);
